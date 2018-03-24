@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PluginWanAndroid.iml" filepath="$PROJECT_DIR$/PluginWanAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pluglin_basic/pluglin_basic.iml" filepath="$PROJECT_DIR$/pluglin_basic/pluglin_basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pluglin_index/pluglin_index.iml" filepath="$PROJECT_DIR$/pluglin_index/pluglin_index.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pluglin_lib/pluglin_lib.iml" filepath="$PROJECT_DIR$/pluglin_lib/pluglin_lib.iml" />
+    </modules>
+  </component>
+</project>

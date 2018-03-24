@@ -1,0 +1,9 @@
+[
+  {
+    "type": "activity",
+    "nameAlias": "Main",
+    "clazz": "com.wanandroid.ykk.pluglin_basic.activity.BasicMainActivity",
+    "template": "",
+    "params": ""
+  }
+]

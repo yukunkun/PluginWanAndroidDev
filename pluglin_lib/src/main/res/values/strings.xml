@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">pluglin_lib</string>
+    <string name="title_activity_base">BaseActivity</string>
+</resources>
