@@ -2,10 +2,24 @@ package com.wanandroid.ykk.pluglin_lib.http;
 
 import android.content.Context;
 
+import com.wanandroid.ykk.pluglin_lib.MyApp;
+import com.wanandroid.ykk.pluglin_lib.enerty.FeedInfo;
+import com.wanandroid.ykk.pluglin_lib.utils.ToastUtils;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
+import okhttp3.ResponseBody;
 import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 
 /**
@@ -14,21 +28,23 @@ import retrofit2.Retrofit;
 
 public class RetrifitNetUtils {
 
-    Context context;
+    static Context context= MyApp.mInstance;
 
-    OkHttpClient httpClient = setCookies(new OkHttpClient.Builder());
+    public static String FEEDURL="http://www.wanandroid.com/";
 
-    public Retrofit getRetrifitUtils(){
+    public static OkHttpClient httpClient = setCookies(new OkHttpClient.Builder());
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("")
+    public static NetService getRetrifitUtils(){
+
+        NetService netService = new Retrofit.Builder()
+                .baseUrl(FEEDURL)
                 .client(httpClient)
-                .build();
-        return retrofit;
+                .build().create(NetService.class);
+        return netService;
     }
 
 
-    public OkHttpClient setCookies(OkHttpClient.Builder builder) {
+    public static OkHttpClient setCookies(OkHttpClient.Builder builder) {
         builder.addInterceptor(new AddCookiesInterceptor(context));
         builder.addInterceptor(new SaveCookiesInterceptor(context));
         builder.addInterceptor(getHttpLoggingInterceptor());
@@ -45,4 +61,5 @@ public class RetrifitNetUtils {
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         return loggingInterceptor;
     }
+
 }

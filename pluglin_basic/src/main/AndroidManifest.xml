@@ -3,8 +3,9 @@
     package="com.wanandroid.ykk.pluglin_basic">
 
     <application>
-        <activity android:name=".activity.BasicMainActivity"></activity>
-        <activity android:name=".activity.SplashActivity"></activity>
+        <activity android:name=".activity.BasicMainActivity" />
+        <activity android:name=".activity.SplashActivity" />
+        <activity android:name=".activity.DetailActivity"></activity>
     </application>
 
 </manifest>

@@ -1,100 +1,73 @@
 package com.wanandroid.ykk.pluglin_lib.enerty;
 
-import java.util.List;
-
 /**
  * Created by yukun on 18-1-5.
  */
 
 public class SearchHot {
 
-    /**
-     * errorCode : 0
-     * errorMsg : null
-     * data : [{"id":6,"name":"面试","link":null,"visible":1,"order":1},{"id":9,"name":"Studio3","link":null,"visible":1,"order":1},{"id":5,"name":"动画","link":null,"visible":1,"order":2},{"id":1,"name":"自定义View","link":null,"visible":1,"order":3},{"id":2,"name":"性能优化 速度","link":null,"visible":1,"order":4},{"id":3,"name":"gradle","link":null,"visible":1,"order":5},{"id":4,"name":"Camera 相机","link":null,"visible":1,"order":6},{"id":7,"name":"代码混淆 安全","link":null,"visible":1,"order":7},{"id":8,"name":"逆向 加固","link":null,"visible":1,"order":8}]
-     */
 
-    private int errorCode;
-    private Object errorMsg;
     /**
-     * id : 6
-     * name : 面试
-     * link : null
+     * icon :
+     * id : 24
+     * link : https://www.chuangkit.com/designtools/startdesign
+     * name : 素材设计-创客
+     * order : 18
      * visible : 1
-     * order : 1
      */
 
-    private List<DataBean> data;
+    private String icon;
+    private long id;
+    private String link;
+    private String name;
+    private int order;
+    private int visible;
 
-    public int getErrorCode() {
-        return errorCode;
+    public String getIcon() {
+        return icon;
     }
 
-    public void setErrorCode(int errorCode) {
-        this.errorCode = errorCode;
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 
-    public Object getErrorMsg() {
-        return errorMsg;
+    public long getId() {
+        return id;
     }
 
-    public void setErrorMsg(Object errorMsg) {
-        this.errorMsg = errorMsg;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public List<DataBean> getData() {
-        return data;
+    public String getLink() {
+        return link;
     }
 
-    public void setData(List<DataBean> data) {
-        this.data = data;
+    public void setLink(String link) {
+        this.link = link;
     }
 
-    public static class DataBean {
-        private int id;
-        private String name;
-        private Object link;
-        private int visible;
-        private int order;
+    public String getName() {
+        return name;
+    }
 
-        public int getId() {
-            return id;
-        }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-        public void setId(int id) {
-            this.id = id;
-        }
+    public int getOrder() {
+        return order;
+    }
 
-        public String getName() {
-            return name;
-        }
+    public void setOrder(int order) {
+        this.order = order;
+    }
 
-        public void setName(String name) {
-            this.name = name;
-        }
+    public int getVisible() {
+        return visible;
+    }
 
-        public Object getLink() {
-            return link;
-        }
-
-        public void setLink(Object link) {
-            this.link = link;
-        }
-
-        public int getVisible() {
-            return visible;
-        }
-
-        public void setVisible(int visible) {
-            this.visible = visible;
-        }
-
-        public int getOrder() {
-            return order;
-        }
-
-        public void setOrder(int order) {
-            this.order = order;
-        }
+    public void setVisible(int visible) {
+        this.visible = visible;
     }
 }

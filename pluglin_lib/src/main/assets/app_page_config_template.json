@@ -26,5 +26,13 @@
     "clazz": "com.wanandroid.ykk.plug_knowledge.fragment.KnowledgeFragment",
     "template": "",
     "params": ""
+  },
+  {
+    "type": "activity",
+    "nameAlias": "DetailActivity",
+    "clazz": "com.wanandroid.ykk.pluglin_basic.activity.DetailActivity",
+    "template": "",
+    "params": ""
   }
+
 ]

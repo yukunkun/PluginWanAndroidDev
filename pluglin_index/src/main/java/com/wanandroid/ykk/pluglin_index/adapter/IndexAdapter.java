@@ -33,10 +33,14 @@ public class IndexAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             R.color.color_ff2323,R.color.color_ff01bb,R.color.color_ff4081,R.color.color_ffe100,
             R.color.color_30f209,R.color.color_30f209};
 
-
+    OnClickListener onClickListener;
     public IndexAdapter(List<FeedInfo> feedInfos, Context context) {
         mFeedInfos = feedInfos;
         mContext = context;
+    }
+
+    public void setOnClickListener(OnClickListener onClickListener) {
+        this.onClickListener = onClickListener;
     }
 
     @Override
@@ -53,19 +57,20 @@ public class IndexAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             ((MyHolder) holder).mTvContent.setText(datasBean.getTitle());
             ((MyHolder) holder).mTvTime.setText(datasBean.getNiceDate());
             ((MyHolder) holder).mTvClass.setText(datasBean.getChapterName());
-            int pos = mRandom.nextInt(mList.length);
+            final int pos = mRandom.nextInt(mList.length);
             ((MyHolder) holder).mTvName.setTextColor(mContext.getResources().getColor(mList[pos]));
             if(datasBean.isCollect()){
                 ((MyHolder) holder).mIvCollect.setImageResource(R.mipmap.collection_fill);
             }else {
                 ((MyHolder) holder).mIvCollect.setImageResource(R.mipmap.collection);
             }
-//            holder.itemView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onClickListener.onClick(pos,datasBean.getLink(),datasBean.getTitle());
 //                    ActivityUtils.startDetaikActivity(mContext,datasBean.getLink(),datasBean.getTitle());
-//                }
-//            });
+                }
+            });
 //            ((MyHolder) holder).mIvCollect.setOnClickListener(new View.OnClickListener() {
 //
 //
@@ -136,5 +141,9 @@ public class IndexAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             super(itemView);
             ButterKnife.bind(this, itemView);
         }
+    }
+
+    public interface OnClickListener{
+        void onClick(int pos,String url,String title);
     }
 }

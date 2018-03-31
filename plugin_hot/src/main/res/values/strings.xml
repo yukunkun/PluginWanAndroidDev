@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">plugin_hot</string>
+    <string name="jianshu_name">上岸的鱼</string>
+    <string name="jianshu_url">https://www.jianshu.com/u/fa58e0eb8b25</string>
 </resources>

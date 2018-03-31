@@ -1,11 +1,16 @@
 package com.wanandroid.ykk.pluglin_lib.activity;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.wanandroid.ykk.pluglin_lib.cornpage.CorePageManager;
 
 import butterknife.ButterKnife;
 
@@ -42,5 +47,26 @@ public abstract class BaseFragment extends Fragment {
     public void invalidate(Bundle arguments) {
 
     }
+
+    public void startActivity(Context context, String mName, Bundle bundle){
+        CorePageManager.getInstance().openPage(context,mName,bundle);
+    }
+
+    public void startActivity(Context context,String mName){
+        CorePageManager.getInstance().openPage(context,mName,null);
+    }
+
+    public void startResultActivity(Activity context, String mName){
+        CorePageManager.getInstance().openPageForResult(context,mName,null,1);
+    }
+
+    public void startFragment(int fragmentId , FragmentManager fragmentManager, String pageName){
+        CorePageManager.getInstance().gotoPage(fragmentId,fragmentManager,pageName,null,null);
+    }
+
+    public void startFragment(int fragmentId , FragmentManager fragmentManager, String pageName,Bundle bundle){
+        CorePageManager.getInstance().gotoPage(fragmentId,fragmentManager,pageName,bundle,null);
+    }
+
 
 }
