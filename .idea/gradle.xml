@@ -9,9 +9,12 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/plugin_hot" />
             <option value="$PROJECT_DIR$/pluglin_basic" />
             <option value="$PROJECT_DIR$/pluglin_index" />
+            <option value="$PROJECT_DIR$/pluglin_knowledge" />
             <option value="$PROJECT_DIR$/pluglin_lib" />
+            <option value="$PROJECT_DIR$/pluglin_login" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

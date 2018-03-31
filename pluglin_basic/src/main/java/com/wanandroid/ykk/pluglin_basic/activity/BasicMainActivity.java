@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.wanandroid.ykk.pluglin_basic.R;
 import com.wanandroid.ykk.pluglin_basic.R2;
 import com.wanandroid.ykk.pluglin_lib.activity.BaseActivity;
+import com.wanandroid.ykk.pluglin_lib.impl.ActivityConfig;
 import com.wanandroid.ykk.pluglin_lib.views.BMoveView;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ import java.util.List;
 
 import butterknife.BindView;
 
-public class BasicMainActivity extends BaseActivity {
+public class BasicMainActivity extends BaseActivity implements ActivityConfig{
 
     @BindView(R2.id.rg)
     RadioGroup mRg;
@@ -56,6 +57,8 @@ public class BasicMainActivity extends BaseActivity {
         mBMoveView.startAnim();
         ((RadioButton) (mRg.getChildAt(0))).setChecked(true);
         setListener();
+        //默认的第一个fragment
+        startFragment(R.id.fl_layout,getSupportFragmentManager(),IndexFragment);
     }
 
     private void setListener() {
@@ -69,29 +72,22 @@ public class BasicMainActivity extends BaseActivity {
                         mLastPos = i;
                         mBMoveView.setTwoPos(mFirstPos, mLastPos);
                         mFirstPos = mLastPos;
+                        //show fragment
+                        switch (i){
+                            case 0:
+                                startFragment(R.id.fl_layout,getSupportFragmentManager(),IndexFragment);
+                                break;
+                            case 1:
+                                startFragment(R.id.fl_layout,getSupportFragmentManager(),KnowledgeFragment);
+                                break;
+                            case 2:
+                                startFragment(R.id.fl_layout,getSupportFragmentManager(),HotFragment);
+                                break;
+                        }
                     }
                 }
             }
         });
-    }
-
-    /**
-     * fragment 的show和hide
-     *
-     * @param pos
-     */
-    public void show(int pos) {
-        Fragment fragment = mFragments.get(pos);
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.hide(mFragments.get(lastPos));
-
-        if (fragment.isAdded()) {
-            fragmentTransaction.show(fragment);
-        } else {
-            fragmentTransaction.add(R.id.fl_layout, fragment);
-        }
-        fragmentTransaction.commit();
-        lastPos = pos;
     }
 
     //双击退出

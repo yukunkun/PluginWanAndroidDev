@@ -5,5 +5,26 @@
     "clazz": "com.wanandroid.ykk.pluglin_basic.activity.BasicMainActivity",
     "template": "",
     "params": ""
+  },
+  {
+    "type": "fragment",
+    "nameAlias": "IndexFragment",
+    "clazz": "com.wanandroid.ykk.pluglin_index.fragment.IndexFragment",
+    "template": "",
+    "params": ""
+  },
+  {
+    "type": "fragment",
+    "nameAlias": "HotFragment",
+    "clazz": "com.wanandroid.ykk.plugin_hot.fragment.HotFragment",
+    "template": "",
+    "params": ""
+  },
+  {
+    "type": "fragment",
+    "nameAlias": "KnowledgeFragment",
+    "clazz": "com.wanandroid.ykk.plug_knowledge.fragment.KnowledgeFragment",
+    "template": "",
+    "params": ""
   }
 ]

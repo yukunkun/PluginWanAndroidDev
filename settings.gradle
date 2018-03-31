@@ -1,1 +1,1 @@
-include ':app', ':pluglin_lib', ':pluglin_basic', ':pluglin_index'
+include ':app', ':pluglin_lib', ':pluglin_basic', ':pluglin_index', ':pluglin_knowledge', ':plugin_hot', ':pluglin_login'
