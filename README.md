@@ -3,9 +3,11 @@
 #### 有一个简单的java实现，没使用模式的玩Android实现
 [WanAndroid-github](https://github.com/yukunkun/WanAndroid)
 #### 下面是分包的截图
-![spot_1.png](https://upload-images.jianshu.io/upload_images/3001453-cce50deaaa11f474.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-#### 项目之间的依赖关系
 ![spot_2.png](https://upload-images.jianshu.io/upload_images/3001453-472cc7a3d6039007.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+#### 项目之间的依赖关系
+![spot_1.png](https://upload-images.jianshu.io/upload_images/3001453-cce50deaaa11f474.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 ![S80108-15475901.jpg](http://upload-images.jianshu.io/upload_images/3001453-6c3fa9e431e66070.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![S80108-15472704.jpg](http://upload-images.jianshu.io/upload_images/3001453-5575f6839b6ca8ea.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
