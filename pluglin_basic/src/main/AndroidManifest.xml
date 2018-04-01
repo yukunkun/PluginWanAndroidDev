@@ -5,7 +5,8 @@
     <application>
         <activity android:name=".activity.BasicMainActivity" />
         <activity android:name=".activity.SplashActivity" />
-        <activity android:name=".activity.DetailActivity"></activity>
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.DetailActivity"/>
     </application>
 
 </manifest>

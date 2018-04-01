@@ -21,6 +21,7 @@ import com.wanandroid.ykk.pluglin_lib.enerty.FeedInfo;
 import com.wanandroid.ykk.pluglin_lib.http.CustomCallBack;
 import com.wanandroid.ykk.pluglin_lib.http.NetService;
 import com.wanandroid.ykk.pluglin_lib.http.RetrifitNetUtils;
+import com.wanandroid.ykk.pluglin_lib.impl.ActivityConfig;
 import com.wanandroid.ykk.pluglin_lib.utils.ToastUtils;
 
 import org.json.JSONArray;
@@ -39,7 +40,7 @@ import okhttp3.ResponseBody;
  * Created by yukun on 18-1-4.
  */
 
-public class IndexFragment extends BaseFragment {
+public class IndexFragment extends BaseFragment implements ActivityConfig{
     @BindView(R2.id.iv_search)
     ImageView mIvSearch;
     @BindView(R2.id.recyclerview)
@@ -140,7 +141,7 @@ public class IndexFragment extends BaseFragment {
                 Bundle bundle=new Bundle();
                 bundle.putString("url",url);
                 bundle.putString("title",title);
-                startActivity(getContext(),"DetailActivity",bundle);
+                startActivity(getContext(),DetailActivity,bundle);
             }
         });
     }
@@ -149,10 +150,12 @@ public class IndexFragment extends BaseFragment {
     @OnClick({R2.id.iv_search, R2.id.refreshLayout,R2.id.iv_me})
     public void onClick(View view) {
         int viewId = view.getId();
-        if(viewId==R2.id.iv_search){
-
-        }else if(viewId==R2.id.iv_me){
-
+        if(viewId==R.id.iv_search){
+            Bundle bundle=new Bundle();
+            bundle.putString("key","");
+            startActivity(getContext(),SearchActivity,bundle);
+        }else if(viewId==R.id.iv_me){
+            ToastUtils.showToast("之后完善。。。");
         }
 
 //        switch (view.getId()) {

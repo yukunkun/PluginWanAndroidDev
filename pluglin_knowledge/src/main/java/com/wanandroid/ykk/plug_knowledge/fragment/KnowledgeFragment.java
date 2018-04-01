@@ -9,14 +9,21 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.wanandroid.ykk.plug_knowledge.R;
 import com.wanandroid.ykk.plug_knowledge.R2;
 import com.wanandroid.ykk.plug_knowledge.adapter.KnowledgeAdapter;
 import com.wanandroid.ykk.pluglin_lib.activity.BaseFragment;
+import com.wanandroid.ykk.pluglin_lib.enerty.CommonUrl;
 import com.wanandroid.ykk.pluglin_lib.enerty.KnowledgeInfo;
+import com.wanandroid.ykk.pluglin_lib.http.CustomCallBack;
+import com.wanandroid.ykk.pluglin_lib.http.RetrifitNetUtils;
+import com.wanandroid.ykk.pluglin_lib.utils.ActivityUtils;
+import com.wanandroid.ykk.pluglin_lib.utils.ToastUtils;
 import com.wanandroid.ykk.pluglin_lib.views.SwipeItemLayout;
 
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +31,11 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import me.everything.android.ui.overscroll.OverScrollDecoratorHelper;
 import okhttp3.Call;
+import okhttp3.ResponseBody;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import static com.wanandroid.ykk.pluglin_lib.impl.ActivityConfig.SearchActivity;
 
 /**
  * Created by yukun on 18-1-4.
@@ -64,6 +76,26 @@ public class KnowledgeFragment extends BaseFragment {
     }
 
     private void getInfo() {
+        RetrifitNetUtils.getRetrifitUtils().getKnowledge().enqueue(new CustomCallBack() {
+            @Override
+            public void onSuccess(String respond) {
+                Gson gson = new Gson();
+                mKnowledgeInfos=gson.fromJson(respond, new TypeToken<List<KnowledgeInfo>>() {}.getType());
+                mKnowledgeAdapter = new KnowledgeAdapter(mKnowledgeInfos, getContext());
+                mRecyclerview.setAdapter(mKnowledgeAdapter);
+            }
+
+            @Override
+            public void onFail(String errMsg) {
+                ToastUtils.showToast(errMsg);
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+        });
+
 //        OkHttpUtils.get().url(Constanct.TREEURL).build().execute(new StringCallback() {
 //            @Override
 //            public void onError(Call call, Exception e, int id) {
@@ -90,15 +122,15 @@ public class KnowledgeFragment extends BaseFragment {
     }
 
 
-//    @OnClick({R.id.iv_search, R.id.iv_me})
-//    public void onClick(View view) {
-//        switch (view.getId()) {
-//            case R.id.iv_search:
-//                ActivityUtils.startSearchkActivity(getContext(),"");
-//                break;
-//            case R.id.iv_me:
-//                ActivityUtils.startMeActivity(getContext());
-//                break;
-//        }
-//    }
+    @OnClick({R2.id.iv_search, R2.id.iv_me})
+    public void onClick(View view) {
+        int id = view.getId();
+        if(id==R.id.iv_search){
+            Bundle bundle=new Bundle();
+            bundle.putString("key","");
+            startActivity(getContext(),SearchActivity,bundle);
+        }else if(id==R.id.iv_me){
+            ToastUtils.showToast("之后完善。。。");
+        }
+    }
 }

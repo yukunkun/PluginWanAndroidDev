@@ -51,6 +51,11 @@ public abstract class CustomCallBack implements Callback<ResponseBody>{
                 }
             }
         }else {
+            try {
+                Log.i("error",response.errorBody().string());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             ToastUtils.showToast("error:network err");
         }
     }

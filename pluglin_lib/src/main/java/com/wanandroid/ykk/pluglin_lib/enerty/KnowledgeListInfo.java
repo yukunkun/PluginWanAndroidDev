@@ -9,268 +9,302 @@ import java.util.List;
 public class KnowledgeListInfo {
 
     /**
-     * errorCode : 0
-     * errorMsg : null
-     * data : {"datas":[{"id":987,"title":"Android Vector曲折的兼容之路","chapterId":151,"chapterName":"Vector","envelopePic":"","link":"http://blog.csdn.net/eclipsexys/article/details/51838119","author":"x359981514","origin":"CSDN","publishTime":1472975105000,"zan":0,"desc":"两年前写书的时候，就在研究Android L提出的Vector，可研究下来发现，完全不具备兼容性，相信这也是它没有被广泛使用的一个原因，经过Google的不懈努力，现在Vector终于迎来了它的春天。","visible":1,"niceDate":"2016-09-04","courseId":13,"collect":false}],"offset":0,"size":20,"total":1,"pageCount":1,"curPage":1,"over":true}
-     */
-
-    private int errorCode;
-    private Object errorMsg;
-    /**
-     * datas : [{"id":987,"title":"Android Vector曲折的兼容之路","chapterId":151,"chapterName":"Vector","envelopePic":"","link":"http://blog.csdn.net/eclipsexys/article/details/51838119","author":"x359981514","origin":"CSDN","publishTime":1472975105000,"zan":0,"desc":"两年前写书的时候，就在研究Android L提出的Vector，可研究下来发现，完全不具备兼容性，相信这也是它没有被广泛使用的一个原因，经过Google的不懈努力，现在Vector终于迎来了它的春天。","visible":1,"niceDate":"2016-09-04","courseId":13,"collect":false}]
-     * offset : 0
-     * size : 20
-     * total : 1
-     * pageCount : 1
      * curPage : 1
+     * datas : [{"apkLink":"","author":"QQ音乐技术团队","chapterId":30,"chapterName":"Toast","collect":false,"courseId":13,"desc":"","envelopePic":"","fresh":false,"id":2211,"link":"https://mp.weixin.qq.com/s/pS51kuCeT_zg1Lb60rwVnA","niceDate":"2018-01-19","origin":"","projectLink":"","publishTime":1516353183000,"superChapterId":30,"superChapterName":"用户交互","tags":[],"title":"[Android] Toast问题深度剖析(二)","type":0,"visible":1,"zan":0},{"apkLink":"","author":"QQ音乐技术团队","chapterId":30,"chapterName":"Toast","collect":false,"courseId":13,"desc":"","envelopePic":"","fresh":false,"id":2210,"link":"https://mp.weixin.qq.com/s/-bXalVki1KQh6Ey-XvKTjw","niceDate":"2018-01-19","origin":"","projectLink":"","publishTime":1516353171000,"superChapterId":30,"superChapterName":"用户交互","tags":[],"title":"[Android] Toast问题深度剖析(一)","type":0,"visible":1,"zan":0},{"apkLink":"","author":"qq_25867141","chapterId":30,"chapterName":"Toast","collect":false,"courseId":13,"desc":"","envelopePic":"","fresh":false,"id":1063,"link":"http://blog.csdn.net/qq_25867141/article/details/52807705","niceDate":"2016-11-05","origin":"CSDN","projectLink":"","publishTime":1478339429000,"superChapterId":30,"superChapterName":"用户交互","tags":[],"title":"[置顶] 【Android】当关闭通知消息权限后无法显示系统Toast的解决方案","type":0,"visible":1,"zan":0},{"apkLink":"","author":"尼古拉斯_赵四","chapterId":30,"chapterName":"Toast","collect":false,"courseId":13,"desc":"","envelopePic":"","fresh":false,"id":149,"link":"http://blog.csdn.net/jiangwei0910410003/article/details/17096699","niceDate":"2016-06-15","origin":"CSDN","projectLink":"","publishTime":1465976277000,"superChapterId":30,"superChapterName":"用户交互","tags":[],"title":"Android中的Toast重复显示的问题","type":0,"visible":1,"zan":0},{"apkLink":"","author":"roykfw","chapterId":30,"chapterName":"Toast","collect":false,"courseId":13,"desc":"","envelopePic":"","fresh":false,"id":148,"link":"http://blog.csdn.net/zhangweiwtmdbf/article/details/30031015","niceDate":"2016-06-15","origin":"CSDN","projectLink":"","publishTime":1465976239000,"superChapterId":30,"superChapterName":"用户交互","tags":[],"title":"Android自定义Toast","type":0,"visible":1,"zan":0},{"apkLink":"","author":"_Ryeeeeee ","chapterId":30,"chapterName":"Toast","collect":false,"courseId":13,"desc":"","envelopePic":"","fresh":false,"id":147,"link":"http://www.jianshu.com/p/2088216e65fb","niceDate":"2016-06-15","origin":"简书","projectLink":"","publishTime":1465976214000,"superChapterId":30,"superChapterName":"用户交互","tags":[],"title":"「Android Tips」Toast 的一些使用技巧","type":0,"visible":1,"zan":0}]
+     * offset : 0
      * over : true
+     * pageCount : 1
+     * size : 20
+     * total : 6
      */
 
-    private DataBean data;
+    private int curPage;
+    private int offset;
+    private boolean over;
+    private int pageCount;
+    private int size;
+    private int total;
+    private List<DatasBean> datas;
 
-    public int getErrorCode() {
-        return errorCode;
+    public int getCurPage() {
+        return curPage;
     }
 
-    public void setErrorCode(int errorCode) {
-        this.errorCode = errorCode;
+    public void setCurPage(int curPage) {
+        this.curPage = curPage;
     }
 
-    public Object getErrorMsg() {
-        return errorMsg;
+    public int getOffset() {
+        return offset;
     }
 
-    public void setErrorMsg(Object errorMsg) {
-        this.errorMsg = errorMsg;
+    public void setOffset(int offset) {
+        this.offset = offset;
     }
 
-    public DataBean getData() {
-        return data;
+    public boolean isOver() {
+        return over;
     }
 
-    public void setData(DataBean data) {
-        this.data = data;
+    public void setOver(boolean over) {
+        this.over = over;
     }
 
-    public static class DataBean {
-        private int offset;
-        private int size;
-        private int total;
-        private int pageCount;
-        private int curPage;
-        private boolean over;
+    public int getPageCount() {
+        return pageCount;
+    }
+
+    public void setPageCount(int pageCount) {
+        this.pageCount = pageCount;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+    public List<DatasBean> getDatas() {
+        return datas;
+    }
+
+    public void setDatas(List<DatasBean> datas) {
+        this.datas = datas;
+    }
+
+    public static class DatasBean {
         /**
-         * id : 987
-         * title : Android Vector曲折的兼容之路
-         * chapterId : 151
-         * chapterName : Vector
-         * envelopePic :
-         * link : http://blog.csdn.net/eclipsexys/article/details/51838119
-         * author : x359981514
-         * origin : CSDN
-         * publishTime : 1472975105000
-         * zan : 0
-         * desc : 两年前写书的时候，就在研究Android L提出的Vector，可研究下来发现，完全不具备兼容性，相信这也是它没有被广泛使用的一个原因，经过Google的不懈努力，现在Vector终于迎来了它的春天。
-         * visible : 1
-         * niceDate : 2016-09-04
-         * courseId : 13
+         * apkLink :
+         * author : QQ音乐技术团队
+         * chapterId : 30
+         * chapterName : Toast
          * collect : false
+         * courseId : 13
+         * desc :
+         * envelopePic :
+         * fresh : false
+         * id : 2211
+         * link : https://mp.weixin.qq.com/s/pS51kuCeT_zg1Lb60rwVnA
+         * niceDate : 2018-01-19
+         * origin :
+         * projectLink :
+         * publishTime : 1516353183000
+         * superChapterId : 30
+         * superChapterName : 用户交互
+         * tags : []
+         * title : [Android] Toast问题深度剖析(二)
+         * type : 0
+         * visible : 1
+         * zan : 0
          */
 
-        private List<DatasBean> datas;
+        private String apkLink;
+        private String author;
+        private int chapterId;
+        private String chapterName;
+        private boolean collect;
+        private int courseId;
+        private String desc;
+        private String envelopePic;
+        private boolean fresh;
+        private int id;
+        private String link;
+        private String niceDate;
+        private String origin;
+        private String projectLink;
+        private long publishTime;
+        private int superChapterId;
+        private String superChapterName;
+        private String title;
+        private int type;
+        private int visible;
+        private int zan;
+        private List<?> tags;
 
-        public int getOffset() {
-            return offset;
+        public String getApkLink() {
+            return apkLink;
         }
 
-        public void setOffset(int offset) {
-            this.offset = offset;
+        public void setApkLink(String apkLink) {
+            this.apkLink = apkLink;
         }
 
-        public int getSize() {
-            return size;
+        public String getAuthor() {
+            return author;
         }
 
-        public void setSize(int size) {
-            this.size = size;
+        public void setAuthor(String author) {
+            this.author = author;
         }
 
-        public int getTotal() {
-            return total;
+        public int getChapterId() {
+            return chapterId;
         }
 
-        public void setTotal(int total) {
-            this.total = total;
+        public void setChapterId(int chapterId) {
+            this.chapterId = chapterId;
         }
 
-        public int getPageCount() {
-            return pageCount;
+        public String getChapterName() {
+            return chapterName;
         }
 
-        public void setPageCount(int pageCount) {
-            this.pageCount = pageCount;
+        public void setChapterName(String chapterName) {
+            this.chapterName = chapterName;
         }
 
-        public int getCurPage() {
-            return curPage;
+        public boolean isCollect() {
+            return collect;
         }
 
-        public void setCurPage(int curPage) {
-            this.curPage = curPage;
+        public void setCollect(boolean collect) {
+            this.collect = collect;
         }
 
-        public boolean isOver() {
-            return over;
+        public int getCourseId() {
+            return courseId;
         }
 
-        public void setOver(boolean over) {
-            this.over = over;
+        public void setCourseId(int courseId) {
+            this.courseId = courseId;
         }
 
-        public List<DatasBean> getDatas() {
-            return datas;
+        public String getDesc() {
+            return desc;
         }
 
-        public void setDatas(List<DatasBean> datas) {
-            this.datas = datas;
+        public void setDesc(String desc) {
+            this.desc = desc;
         }
 
-        public static class DatasBean {
-            private int id;
-            private String title;
-            private int chapterId;
-            private String chapterName;
-            private String envelopePic;
-            private String link;
-            private String author;
-            private String origin;
-            private long publishTime;
-            private int zan;
-            private String desc;
-            private int visible;
-            private String niceDate;
-            private int courseId;
-            private boolean collect;
+        public String getEnvelopePic() {
+            return envelopePic;
+        }
 
-            public int getId() {
-                return id;
-            }
+        public void setEnvelopePic(String envelopePic) {
+            this.envelopePic = envelopePic;
+        }
 
-            public void setId(int id) {
-                this.id = id;
-            }
+        public boolean isFresh() {
+            return fresh;
+        }
 
-            public String getTitle() {
-                return title;
-            }
+        public void setFresh(boolean fresh) {
+            this.fresh = fresh;
+        }
 
-            public void setTitle(String title) {
-                this.title = title;
-            }
+        public int getId() {
+            return id;
+        }
 
-            public int getChapterId() {
-                return chapterId;
-            }
+        public void setId(int id) {
+            this.id = id;
+        }
 
-            public void setChapterId(int chapterId) {
-                this.chapterId = chapterId;
-            }
+        public String getLink() {
+            return link;
+        }
 
-            public String getChapterName() {
-                return chapterName;
-            }
+        public void setLink(String link) {
+            this.link = link;
+        }
 
-            public void setChapterName(String chapterName) {
-                this.chapterName = chapterName;
-            }
+        public String getNiceDate() {
+            return niceDate;
+        }
 
-            public String getEnvelopePic() {
-                return envelopePic;
-            }
+        public void setNiceDate(String niceDate) {
+            this.niceDate = niceDate;
+        }
 
-            public void setEnvelopePic(String envelopePic) {
-                this.envelopePic = envelopePic;
-            }
+        public String getOrigin() {
+            return origin;
+        }
 
-            public String getLink() {
-                return link;
-            }
+        public void setOrigin(String origin) {
+            this.origin = origin;
+        }
 
-            public void setLink(String link) {
-                this.link = link;
-            }
+        public String getProjectLink() {
+            return projectLink;
+        }
 
-            public String getAuthor() {
-                return author;
-            }
+        public void setProjectLink(String projectLink) {
+            this.projectLink = projectLink;
+        }
 
-            public void setAuthor(String author) {
-                this.author = author;
-            }
+        public long getPublishTime() {
+            return publishTime;
+        }
 
-            public String getOrigin() {
-                return origin;
-            }
+        public void setPublishTime(long publishTime) {
+            this.publishTime = publishTime;
+        }
 
-            public void setOrigin(String origin) {
-                this.origin = origin;
-            }
+        public int getSuperChapterId() {
+            return superChapterId;
+        }
 
-            public long getPublishTime() {
-                return publishTime;
-            }
+        public void setSuperChapterId(int superChapterId) {
+            this.superChapterId = superChapterId;
+        }
 
-            public void setPublishTime(long publishTime) {
-                this.publishTime = publishTime;
-            }
+        public String getSuperChapterName() {
+            return superChapterName;
+        }
 
-            public int getZan() {
-                return zan;
-            }
+        public void setSuperChapterName(String superChapterName) {
+            this.superChapterName = superChapterName;
+        }
 
-            public void setZan(int zan) {
-                this.zan = zan;
-            }
+        public String getTitle() {
+            return title;
+        }
 
-            public String getDesc() {
-                return desc;
-            }
+        public void setTitle(String title) {
+            this.title = title;
+        }
 
-            public void setDesc(String desc) {
-                this.desc = desc;
-            }
+        public int getType() {
+            return type;
+        }
 
-            public int getVisible() {
-                return visible;
-            }
+        public void setType(int type) {
+            this.type = type;
+        }
 
-            public void setVisible(int visible) {
-                this.visible = visible;
-            }
+        public int getVisible() {
+            return visible;
+        }
 
-            public String getNiceDate() {
-                return niceDate;
-            }
+        public void setVisible(int visible) {
+            this.visible = visible;
+        }
 
-            public void setNiceDate(String niceDate) {
-                this.niceDate = niceDate;
-            }
+        public int getZan() {
+            return zan;
+        }
 
-            public int getCourseId() {
-                return courseId;
-            }
+        public void setZan(int zan) {
+            this.zan = zan;
+        }
 
-            public void setCourseId(int courseId) {
-                this.courseId = courseId;
-            }
+        public List<?> getTags() {
+            return tags;
+        }
 
-            public boolean isCollect() {
-                return collect;
-            }
-
-            public void setCollect(boolean collect) {
-                this.collect = collect;
-            }
+        public void setTags(List<?> tags) {
+            this.tags = tags;
         }
     }
 }

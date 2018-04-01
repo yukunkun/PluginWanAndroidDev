@@ -33,6 +33,13 @@
     "clazz": "com.wanandroid.ykk.pluglin_basic.activity.DetailActivity",
     "template": "",
     "params": ""
+  },
+  {
+    "type": "activity",
+    "nameAlias": "SearchActivity",
+    "clazz": "com.wanandroid.ykk.pluglin_basic.activity.SearchActivity",
+    "template": "",
+    "params": ""
   }
 
 ]

@@ -20,6 +20,7 @@ import com.wanandroid.ykk.pluglin_lib.enerty.SearchInfo;
 import com.wanandroid.ykk.pluglin_lib.http.CustomCallBack;
 import com.wanandroid.ykk.pluglin_lib.http.NetService;
 import com.wanandroid.ykk.pluglin_lib.http.RetrifitNetUtils;
+import com.wanandroid.ykk.pluglin_lib.impl.ActivityConfig;
 import com.wanandroid.ykk.pluglin_lib.utils.ToastUtils;
 import com.wanandroid.ykk.pluglin_lib.views.NoScrolledListView;
 import com.wanandroid.ykk.pluglin_lib.views.TagLayout;
@@ -40,7 +41,7 @@ import okhttp3.Call;
  * Created by yukun on 18-1-4.
  */
 
-public class HotFragment extends BaseFragment {
+public class HotFragment extends BaseFragment implements ActivityConfig{
     @BindView(R2.id.taglayout)
     TagLayout mTaglayout;
     @BindView(R2.id.listview)
@@ -151,22 +152,23 @@ public class HotFragment extends BaseFragment {
                 @Override
                 public void onClick(View v) {
                     SearchHot searchHot = mJokeList.get(finalI);
-//                    ActivityUtils.startSearchkActivity(getContext(),dataBean.getName());
+                    Bundle bundle=new Bundle();
+                    bundle.putString("key",searchHot.getName());
+                    startActivity(getContext(),SearchActivity,bundle);
                 }
             });
         }
     }
 
-//    @OnClick({R.id.iv_search, R.id.iv_me})
-//    public void onClick(View view) {
-//        switch (view.getId()) {
-//            case R.id.iv_search:
-//                ActivityUtils.startSearchkActivity(getContext(),"");
-//                break;
-//            case R.id.iv_me:
-//                ActivityUtils.startMeActivity(getContext());
-//                break;
-//        }
-//    }
+    @OnClick({R2.id.iv_search, R2.id.iv_me})
+    public void onClick(View view) {
+        if (view.getId() == R.id.iv_search) {
+            Bundle bundle=new Bundle();
+            bundle.putString("key","");
+            startActivity(getContext(),SearchActivity,bundle);
+        } else if (view.getId() == R.id.iv_me) {
+            ToastUtils.showToast("之后完善。。。");
+        }
+    }
 
 }

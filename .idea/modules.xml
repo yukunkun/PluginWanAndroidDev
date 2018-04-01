@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PluginWanAndroid.iml" filepath="$PROJECT_DIR$/PluginWanAndroid.iml" />
+      <module fileurl="file://D:\project\PluginWanAndroidDev\PluginWanAndroid.iml" filepath="D:\project\PluginWanAndroidDev\PluginWanAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PluginWanAndroidDev.iml" filepath="$PROJECT_DIR$/PluginWanAndroidDev.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugin_hot/plugin_hot.iml" filepath="$PROJECT_DIR$/plugin_hot/plugin_hot.iml" />
       <module fileurl="file://$PROJECT_DIR$/pluglin_basic/pluglin_basic.iml" filepath="$PROJECT_DIR$/pluglin_basic/pluglin_basic.iml" />

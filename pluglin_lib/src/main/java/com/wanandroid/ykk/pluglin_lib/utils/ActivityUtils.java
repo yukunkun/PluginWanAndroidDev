@@ -3,6 +3,8 @@ package com.wanandroid.ykk.pluglin_lib.utils;
 import android.content.Context;
 import android.content.Intent;
 
+import com.wanandroid.ykk.pluglin_lib.enerty.KnowledgeInfo;
+
 /**
  * Created by yukun on 18-1-5.
  */
@@ -34,7 +36,7 @@ public class ActivityUtils {
 //        context.startActivity(intent);
 //    }
 //
-//    public static void startKnowListActivity(Context context, KnowledgeInfo.DataBean dataBean){
+//    public static void startKnowListActivity(Context context, KnowledgeInfo.ChildrenBean dataBean){
 //        Intent intent=new Intent(context, KnowListActivity.class);
 //        intent.putExtra("knowlist",dataBean);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

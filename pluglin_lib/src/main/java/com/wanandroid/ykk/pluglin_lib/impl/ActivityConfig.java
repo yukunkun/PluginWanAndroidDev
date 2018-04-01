@@ -12,4 +12,8 @@ public interface ActivityConfig {
 
       String KnowledgeFragment="KnowledgeFragment";
 
+      String DetailActivity="DetailActivity";
+
+      String SearchActivity="SearchActivity";
+
 }

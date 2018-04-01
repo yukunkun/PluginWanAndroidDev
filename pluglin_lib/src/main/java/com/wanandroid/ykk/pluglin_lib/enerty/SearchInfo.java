@@ -9,14 +9,6 @@ import java.util.List;
 public class SearchInfo {
 
     /**
-     * errorCode : 0
-     * errorMsg : null
-     * data : {"datas":[{"id":1839,"title":"<em class='highlight'>如何让你的ap<\/em>p在后台被干掉后优雅的重新启动","chapterId":228,"chapterName":"辅助 or 工具类","envelopePic":null,"link":"https://www.jianshu.com/p/1946bd4f3bb5","author":"Me豪","origin":null,"publishTime":1515119001000,"zan":null,"desc":null,"visible":0,"niceDate":"4小时前","courseId":13,"collect":false}],"offset":0,"size":20,"total":1,"pageCount":1,"curPage":1,"over":true}
-     */
-
-    private int errorCode;
-    private Object errorMsg;
-    /**
      * datas : [{"id":1839,"title":"<em class='highlight'>如何让你的ap<\/em>p在后台被干掉后优雅的重新启动","chapterId":228,"chapterName":"辅助 or 工具类","envelopePic":null,"link":"https://www.jianshu.com/p/1946bd4f3bb5","author":"Me豪","origin":null,"publishTime":1515119001000,"zan":null,"desc":null,"visible":0,"niceDate":"4小时前","courseId":13,"collect":false}]
      * offset : 0
      * size : 20
@@ -25,34 +17,6 @@ public class SearchInfo {
      * curPage : 1
      * over : true
      */
-
-    private DataBean data;
-
-    public int getErrorCode() {
-        return errorCode;
-    }
-
-    public void setErrorCode(int errorCode) {
-        this.errorCode = errorCode;
-    }
-
-    public Object getErrorMsg() {
-        return errorMsg;
-    }
-
-    public void setErrorMsg(Object errorMsg) {
-        this.errorMsg = errorMsg;
-    }
-
-    public DataBean getData() {
-        return data;
-    }
-
-    public void setData(DataBean data) {
-        this.data = data;
-    }
-
-    public static class DataBean {
         private int offset;
         private int size;
         private int total;
@@ -271,6 +235,5 @@ public class SearchInfo {
             public void setCollect(boolean collect) {
                 this.collect = collect;
             }
-        }
     }
 }

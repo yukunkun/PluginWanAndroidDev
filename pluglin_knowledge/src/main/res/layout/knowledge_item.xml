@@ -18,7 +18,7 @@
                       android:textColor="@color/color_2b2b2b"
                       android:layout_height="wrap_content"/>
             <TextView android:layout_width="match_parent"
-                      android:layout_marginRight="20dp"
+                      android:layout_marginRight="30dp"
                       android:text=""
                       android:layout_marginTop="50dp"
                       android:id="@+id/tv_catgroy"
@@ -27,9 +27,8 @@
                       android:layout_marginLeft="10dp"
                       android:layout_marginBottom="10dp"
                       android:layout_height="wrap_content"/>
-            <ImageView android:layout_width="wrap_content"
+            <ImageView android:layout_width="45dp"
                        android:src="@mipmap/right"
-                       android:layout_marginLeft="25dp"
                        android:layout_centerVertical="true"
                        android:layout_alignParentRight="true"
                        android:layout_height="20dp"/>
