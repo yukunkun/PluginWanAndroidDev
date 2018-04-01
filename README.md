@@ -1,4 +1,4 @@
-#### 插件化开发，WanAndroid客户端实现
+#### 组件化开发，WanAndroid客户端实现
 #### 实现效果如下。
 #### 有一个简单的java实现，没使用模式的玩Android实现
 [WanAndroid-github](https://github.com/yukunkun/WanAndroid)
